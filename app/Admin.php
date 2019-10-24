@@ -49,4 +49,7 @@ class Admin extends Authenticatable implements MustVerifyEmail
     {
         $this->notify(new AdminEmailVerificationNotification);
     }
+
+
+   
 }

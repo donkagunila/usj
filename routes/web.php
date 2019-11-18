@@ -3,9 +3,7 @@
 
 /* --------------------- Common/User Routes START -------------------------------- */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'SiteController@ndex')->name('index');
 
 Auth::routes([ 'verify' => true ]);
 

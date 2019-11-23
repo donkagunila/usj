@@ -5,72 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
-    <style>
-        /*
-            these styles will animate bootstrap alerts.
-        */
-        .alert{
-            z-index: 99;
-            top: 60px;
-            right:18px;
-            min-width:30%;
-            position: fixed;
-            animation: slide 0.5s forwards;
-        }
+    <link rel="icon" type="image/png" href="/assets/img/logo/favicon.png">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
 
-        @keyframes slide {
-            100% { top: 30px; }
-        }
 
-        @media screen and (max-width: 668px) {
-            .alert{ /* center the alert on small screens */
-                left: 10px;
-                right: 10px; 
-            }
-        }
-    </style>
-
-    <title>{{config('app.name')}}</title>
+    <title>Usajili | @yield('title')</title>
 </head>
 <body>
 
-    @include('inc.navbar')
+    @include('inc.app.navbar')
+
+
     <main class="container mt-4">
         @yield('content')
     </main>
 
+   
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="{{asset('js/app.js')}}"></script>
-    
-    {{-- Success Alert --}}
-    @if(session('status'))
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            {{session('status')}}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    @endif
-
-    {{-- Error Alert --}}
-    @if(session('error'))
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            {{session('error')}}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    @endif
-
-    <script>
-        //close the alert after 3 seconds.
-        $(document).ready(function(){
-			setTimeout(function() {
-	        	$(".alert").alert('close');
-	    	}, 3000);
-    	});
-    </script>
-    
 </body>
 </html>

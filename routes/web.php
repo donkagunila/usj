@@ -3,11 +3,11 @@
 
 /* --------------------- Common/User Routes START -------------------------------- */
 
-Route::get('/', 'SiteController@ndex')->name('index');
+Route::get('/', 'SiteController@index')->name('index');
 
 Auth::routes([ 'verify' => true ]);
 
-Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+Route::get('/feed', 'HomeController@index')->name('home')->middleware('verified');
 
 /* --------------------- Common/User Routes END -------------------------------- */
 

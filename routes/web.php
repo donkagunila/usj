@@ -8,6 +8,7 @@ Route::get('/', 'SiteController@index')->name('index');
 Auth::routes([ 'verify' => true ]);
 
 Route::get('/feed', 'HomeController@index')->name('home')->middleware('verified');
+Route::get('/openings', 'HomeController@inex')->name('openings')->middleware('verified');
 
 /* --------------------- Common/User Routes END -------------------------------- */
 

@@ -7,8 +7,17 @@ Route::get('/', 'SiteController@index')->name('index');
 
 Auth::routes([ 'verify' => true ]);
 
+Route::get('/users/all', 'Admin\UserController@all')->name('users.all');
+
 Route::get('/feed', 'HomeController@index')->name('home')->middleware('verified');
-Route::get('/openings', 'HomeController@inex')->name('openings')->middleware('verified');
+Route::get('/openings', 'HomeController@openings')->name('openings')->middleware('verified');
+Route::get('/vendor/join', 'VendorController@join')->name('vendor.join')->middleware('verified');
+
+// Profile routes
+
+Route::get('/my-profile', 'ProfileController@index')->name('profile')->middleware('verified');
+
+
 
 /* --------------------- Common/User Routes END -------------------------------- */
 

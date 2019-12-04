@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Opening;
 
 class HomeController extends Controller
 {
@@ -24,5 +25,12 @@ class HomeController extends Controller
     public function index()
     {
         return view('app.feed');
+    }
+
+    public function openings()
+    {
+
+        $openings = Opening::all();
+        return view('app.opening', compact('openings'));
     }
 }

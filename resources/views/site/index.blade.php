@@ -29,7 +29,7 @@
                 
             <!-- Buttons -->
             <div class="text-center text-md-left">
-              <a href="overview.html" class="btn btn-primary shadow lift mr-1">
+              <a href="{{ route('register')}}" class="btn btn-primary shadow lift mr-1">
                 Get Started <i class="fe fe-arrow-right d-none d-md-inline ml-3"></i>
               </a>
               

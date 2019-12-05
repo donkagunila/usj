@@ -1,0 +1,52 @@
+.auth-cover{
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Niramit', sans-serif;
+}
+p, a{
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+.h-full{
+	min-height: 100vh !important;
+}
+.main-section{
+	padding-top: 70px;
+}
+.user-area{
+	min-height: 200px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.user-img{
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.user-img img{
+	height: 100%;
+}
+.sidebar .list-group .list-group-item a{
+	display: block;
+	height: 100%;
+	width: 100%;
+	color: #707070;
+}
+.sidebar .list-group .list-group-item.active a{
+	color: #fff !important;
+}

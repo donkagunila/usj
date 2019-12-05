@@ -18,7 +18,7 @@ class CreateVendorsTable extends Migration
             $table->integer('user_id');
             $table->string('name');
             $table->string('category');
-            $table->string('subcategory');
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }

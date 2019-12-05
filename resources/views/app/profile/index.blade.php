@@ -4,19 +4,13 @@
 
 @section('content')
 
+<section class="main-section">
+
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4">
-				<div class="card">
-					<div class="card-body">
-						{{ Auth::User()->username }}
-
-
-					</div>
-				</div>
-			</div>
-
+			
+			@include('inc.app.sidebar')
 
 			<div class="col-md-8">
 				<div class="float-right">
@@ -25,4 +19,6 @@
 			</div>
 		</div>
 	</div>
+
+</section>
 @endsection

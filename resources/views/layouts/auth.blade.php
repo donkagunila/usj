@@ -10,13 +10,9 @@
 
     <link href="https://fonts.googleapis.com/css?family=Niramit|Open+Sans&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/lib/stroke-7/style.css')}}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/lib/perfect-scrollbar/css/perfect-scrollbar.css')}}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/lib/theme-switcher/theme-switcher.min.css')}}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/lib/font-awesome/css/font-awesome.min.css')}}"/>
 
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/lib/font-awesome/css/font-awesome.min.css')}}"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
- 
     <link rel="stylesheet" href="{{ asset('assets/css/main.css')}}">
 </head>
      
@@ -26,10 +22,6 @@
 </head>
 <body>
 
-
-    
-
-    @include('inc.app.navbar')
 
 
     <main>

@@ -9,9 +9,20 @@ Auth::routes([ 'verify' => true ]);
 
 Route::get('/users/all', 'Admin\UserController@all')->name('users.all');
 
-Route::get('/feed', 'HomeController@index')->name('home')->middleware('verified');
+Route::middleware(['verified'])->group(function () {
+    Route::prefix('/vendor')->name('vendor.')->group(function () {
+        Route::get('/join', 'VendorController@join')->name('join');
+        Route::post('/submit', 'VendorController@save')->name('store');
+    });
+
+    Route::get('/feed', 'HomeController@index')->name('home');
+
+    Route::prefix('/category')->name('category.')->group(function (){
+       Route::get('/all', 'CategoryController@index')->name('all'); 
+    });
+});
+
 Route::get('/openings', 'HomeController@openings')->name('openings')->middleware('verified');
-Route::get('/vendor/join', 'VendorController@join')->name('vendor.join')->middleware('verified');
 
 // Profile routes
 

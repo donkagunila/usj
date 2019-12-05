@@ -6,10 +6,10 @@
       -->
       <div class="logo">
         <a href="{{ route('admin.home')}}" class="simple-text logo-mini">
-          PN
+          <img src="{{ asset('assets/img/logo/favicon.png')}}" class="img-fluid" alt="">
         </a>
         <a href="{{ route('admin.home')}}" class="simple-text logo-normal">
-          Project Name
+          Usajili
         </a>
       </div>
       <div class="sidebar-wrapper">
@@ -47,6 +47,16 @@
                
               </ul>
             </div>
+          </li>
+
+
+
+          <li class="nav-item {{ Request::is('category/*') ? 'active' : ''}}">
+            <a class="nav-link" href="{{ route('category.all')}}">
+              <i class="material-icons">category</i>
+              <p> Categories </p>
+            </a>
+          
           </li>
          
         </ul>

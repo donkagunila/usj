@@ -3,14 +3,15 @@
 @section('title', 'Become a vendor')
 
 @section('content')
+<section class="main-section">
 
 <div class="container">
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Fill in the form to become a vevendor</div>
+                <div class="card-header">Fill in the form to become a Vendor</div>
                 <div class="card-body">
-                	<form action="">
+                	<form action="{{ route('vendor.store')}}" method="POST">
                 		@csrf
 						
                            <div>
@@ -45,4 +46,6 @@
         </div>
     </div>
 </div>
+
+</section>
 @endsection

@@ -17,9 +17,7 @@ Route::middleware(['verified'])->group(function () {
 
     Route::get('/feed', 'HomeController@index')->name('home');
 
-    Route::prefix('/category')->name('category.')->group(function (){
-       Route::get('/all', 'CategoryController@index')->name('all'); 
-    });
+   
 });
 
 Route::get('/openings', 'HomeController@openings')->name('openings')->middleware('verified');
@@ -73,6 +71,12 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
     {
        Route::get('list', 'UserController@index')->name('user.list');
        Route::get('add', 'UserController@create')->name('user.add');
+       Route::post('add', 'UserController@save')->name('user.save');
+
+    });
+
+     Route::prefix('/category')->name('category.')->group(function (){
+       Route::get('/all', 'CategoryController@index')->name('all'); 
     });
 
 });

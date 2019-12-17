@@ -51,8 +51,8 @@
 
 
 
-          <li class="nav-item {{ Request::is('category/*') ? 'active' : ''}}">
-            <a class="nav-link" href="{{ route('category.all')}}">
+          <li class="nav-item {{ Request::is('*category/*') ? 'active' : ''}}">
+            <a class="nav-link" href="{{ route('admin.category.all')}}">
               <i class="material-icons">category</i>
               <p> Categories </p>
             </a>

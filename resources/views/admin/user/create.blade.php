@@ -9,36 +9,86 @@
       	<div class="content mt-30">
       		<div class="container-fluid">
 	      		<div class="row">
-	      		 <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="card card-stats">
-                              <div class="card-header card-header-primary card-header-icon">
-                                <div class="card-icon">
-                                  <i class="material-icons">people</i>
-                                </div>
-                                <p class="card-category">Users</p>
-                                <h3 class="card-title">{{ App\Site::CountUsers() }}</h3>
-                              </div>
-                              <div class="card-footer">
-                                <div class="stats">
-                                  <i class="material-icons text-primary">add</i>
-                                  <a href="{{ route('admin.user.add')}}">Add Users</a>
-                                </div>
-                              </div>
+	      		   <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header">
+                    
+                  </div>
+                  <div class="card-body">
+                     <form method="POST" action="{{ route('admin.user.save') }}">
+                            @csrf
+
+                             
+                            <div class="form-group">
+                                <label for="name" >{{ __('Username') }}</label>
+
+                               
+                                    <input id="name" type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" required >
+
+                                    @if ($errors->has('username'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('username') }}</strong>
+                                        </span>
+                                    @endif
+                               
                             </div>
-                          </div>
+
+                            <div class="form-group">
+                                <label for="email">
+                                    {{ __('E-Mail Address') }}
+                                </label>
+
+                               
+                                    <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+
+                                    @if ($errors->has('email'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+                                    @endif
+                              
+                            </div>
+
+
+                           
+
+                            <div class="form-group">
+                                <label for="password">{{ __('Password') }}</label>
+
+                               
+                                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+
+                                    @if ($errors->has('password'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('password') }}</strong>
+                                        </span>
+                                    @endif
+                                
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password-confirm">{{ __('Confirm Password') }}</label>
+
+                                
+                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                
+                            </div>
+
+                            <div class="form-group mb-0">
+                                
+                                    <button type="submit" class="btn btn-primary">
+                                        {{ __('Register') }}
+                                    </button>
+                                
+                            </div>
+                        </form>
+                  </div>
+                </div>   
+               </div>
 	      		</div>
 	      	</div>
       	</div>
    </div>
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Admin Dashboard</div>
-                <div class="card-body">You are logged in!</div>
-            </div>
-        </div>
-    </div>
-</div>
+
 @endsection

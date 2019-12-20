@@ -56,7 +56,7 @@ class UserController extends Controller
             'user_id' => $user->id,
         ]);
 
-        $request->session()->flash('success', 'User created successfully');
+        $request->session()->flash('success', 'Success, User created successfully');
 
         return redirect()->route('admin.user.add');
     }

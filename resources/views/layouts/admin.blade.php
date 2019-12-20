@@ -61,6 +61,8 @@
 
 
 
+
+
       <script src="{{ asset('assets/js/core/jquery.min.js') }}"></script>
       <script src="{{ asset('assets/js/core/popper.min.js') }}"></script>
       <script src="{{ asset('assets/js/core/bootstrap-material-design.min.js') }}"></script>
@@ -103,6 +105,7 @@
       <script src="{{ asset('assets/js/plugins/bootstrap-notify.js') }}"></script>
       <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
       <script src="{{ asset('assets/js/material-dashboard.minf066.js?v=2.1.0') }}" type="text/javascript"></script>
+      <script src="{{ asset('assets/js/main.js')}}"></script>
    
 
     <script>
@@ -149,6 +152,24 @@
       });
     });
     </script>
+
+    {{-- Success Alert --}}
+        @if(session('success'))
+          <script>
+            $(document).ready(function () {
+              var message = "{{ session('success') }}";
+                $.notify({
+                  // options
+                  message: message,
+                  icon: "done",
+                },{
+                  // settings
+                  type: 'success',
+                  timer: 3e3,
+                });
+            });
+          </script>
+        @endif
     
 </body>
 </html>

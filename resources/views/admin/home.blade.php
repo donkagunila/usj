@@ -26,6 +26,11 @@
                               </div>
                             </div>
               </div>
+
+
+              <div class="col-md-4">
+                            <button class="btn btn-primary btn-block" onclick="md.showNotification('top','right')">Top Right</button>
+                          </div>
 	      		</div>
 	      	</div>
       	</div>

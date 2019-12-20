@@ -49,7 +49,7 @@
 			                       	@foreach($users as $user)
 				                        <tr>
 				                          <td>{{ $user->username }}</td>
-				                          <td>{{ \App\User::is_vendor($user->profile->is_vendor)}}</td>
+				                          <td>{{ $user->is_vendor }}</td>
 				                          <td><a href="mailto:{{ $user->email}}">{{ $user->email}}</a></td>
 				                          <td>{{ $user->created_at->toFormattedDateString() }}</td>
 				                        </tr>

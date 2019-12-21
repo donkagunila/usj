@@ -14,4 +14,16 @@ class CategoryController extends Controller
     	$categories = Category::all();
         return view('admin.category.index', compact('categories'));
     }
+
+    public function save(Request $request)
+    {
+
+    	Category::create([
+    		'title' => request('title'),
+    		'description' => request('description'),
+    	]);
+
+    	$request->session()->flash('success', 'Success, Category created successfully');
+    	return redirect()->route('admin.category.all');
+    }
 }

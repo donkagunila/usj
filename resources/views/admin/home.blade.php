@@ -28,9 +28,26 @@
               </div>
 
 
-              <div class="col-md-4">
-                            <button class="btn btn-primary btn-block" onclick="md.showNotification('top','right')">Top Right</button>
-                          </div>
+               <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                              <div class="card-header card-header-success card-header-icon">
+                                <div class="card-icon">
+                                  <i class="material-icons">category</i>
+                                </div>
+                                <p class="card-category">Categories</p>
+                                <h3 class="card-title">{{ App\Category::CountCategories() }}</h3>
+                              </div>
+                              <div class="card-footer">
+                                <div class="stats stats-success text-success">
+                                  <i class="material-icons text-success">category</i>
+                                  <a href="{{ route('admin.category.all')}}">See Categories</a>
+                                </div>
+                              </div>
+                            </div>
+              </div>
+
+
+            
 	      		</div>
 	      	</div>
       	</div>

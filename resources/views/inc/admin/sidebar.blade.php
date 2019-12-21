@@ -58,6 +58,14 @@
             </a>
           
           </li>
+
+          <li class="nav-item {{ Request::is('*opening/*') ? 'active' : ''}}">
+            <a class="nav-link" href="{{ route('admin.opening.all')}}">
+              <i class="material-icons">track_changes</i>
+              <p> Openings </p>
+            </a>
+          
+          </li>
          
         </ul>
       </div>

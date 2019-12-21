@@ -6,13 +6,13 @@
 <div class="content">
 	<div class="container-fluid">
 		<div class="row">
-			 <div class="col-md-12">
+			 <div class="col-md-8">
 				<div class="card">
 					<div class="card-header card-header-primary card-header-icon">
 					 <div class="card-icon">
 	                    <i class="material-icons">people</i>
 	                  </div>
-	                  <h4 class="card-title">All Users</h4>
+	                  <h4 class="card-title">All Categories</h4>
 					</div>
 
 
@@ -30,6 +30,7 @@
 			                        <tr>
 			                          <th>Name</th>
 			                          <th>Description</th>
+			                          <th>Status</th>
 			                          <th>Date Created</th>
 			                          
 			                        </tr>
@@ -38,6 +39,7 @@
 			                        <tr>
 			                           <th>Name</th>
 			                          <th>Description</th>
+			                          <th>Status</th>
 			                          <th>Date Created</th>
 			                          
 			                          
@@ -47,9 +49,10 @@
 
 			                       	@foreach($categories as $category)
 				                        <tr>
-				                           	<th>{{ $category->title}}</th>
-					                        <th>{{ $category->description}}</th>
-				                            <th>{{ $category->created_at->toFormatedDaeString()}}</th>
+				                           	<td>{{ $category->title}}</td>
+					                        <td>{{ $category->description}}</td>
+					                        <td>{{ \App\Category::status($category->status) }}</td>
+				                            <td>{{ $category->created_at->toFormattedDateString()}}</td>
 				                        </tr>
 				                      @endforeach
 				                        
@@ -59,6 +62,58 @@
 					</div>
 				</div>
 				{{-- end of card --}}
+			 </div>
+
+
+			 <div class="col-md-4">
+			 	<div class="card">
+			 		<div class="card-body">
+			 			<form method="POST" class="form mt-4" action="{{ route('admin.category.save') }}">
+                            @csrf
+
+                             
+                            <div class="form-group">
+                                <label for="name" >{{ __('Title') }}</label>
+
+                               
+                                    <input id="name" type="text" class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" name="title" value="{{ old('title') }}" required >
+
+                                    @if ($errors->has('title'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('title') }}</strong>
+                                        </span>
+                                    @endif
+                               
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">
+                                    {{ __('description') }}
+                                </label>
+
+                               
+                                    <textarea name="description" class="form-control {{ $errors->has('description') ? ' is-invalid' : '' }}">{{ old('description') }}</textarea> 
+                                    @if ($errors->has('description'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('description') }}</strong>
+                                        </span>
+                                    @endif
+                              
+                            </div>
+
+
+                          
+
+                            <div class="form-group mb-0">
+                                
+                                    <button type="submit" class="btn btn-primary">
+                                        {{ __('Create') }}
+                                    </button>
+                                
+                            </div>
+                        </form>
+			 		</div>
+			 	</div>
 			 </div>
 		</div>
 	</div>

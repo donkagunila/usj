@@ -77,7 +77,15 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
 
      Route::prefix('/category')->name('category.')->group(function (){
        Route::get('/all', 'CategoryController@index')->name('all'); 
+        Route::post('/all', 'CategoryController@save')->name('save'); 
     });
+
+     Route::prefix('opening')->name('opening.')->group(function ()
+     {
+         Route::get('all', 'OpeningController@index')->name('all');
+         Route::get('create', 'OpeningController@create')->name('create');
+         Route::post('create', 'OpeningController@save')->name('save');
+     });
 
 });
 

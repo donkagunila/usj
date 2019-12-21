@@ -9,13 +9,16 @@
       	<div class="content mt-30">
       		<div class="container-fluid">
 	      		<div class="row">
-	      		   <div class="col-md-12">
+	      		  <div class="col-md-8">
                 <div class="card">
-                  <div class="card-header">
-                    
+                  <div class="card-header card-header-text card-header-warning">
+                    <div class="card-text">
+                      <h4 class="card-title">Create User</h4>
+                      <p class="card-category">Use the form below to create a user</p>
+                    </div >
                   </div>
                   <div class="card-body">
-                     <form method="POST" action="{{ route('admin.user.save') }}">
+                     <form method="POST" class="form mt-4" action="{{ route('admin.user.save') }}">
                             @csrf
 
                              
@@ -84,7 +87,28 @@
                         </form>
                   </div>
                 </div>   
-               </div>
+              </div>
+
+
+
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="card-title">
+                      User Statistics
+                    </div>
+                    <hr>
+
+                    <ul class="list-group">
+                      <li class="list-group-item d-flex justify-content-between align-items-center">Total Created
+                         <span class="badge badge-primary badge-pill">{{ App\Site::CountUsers() }}</span>
+                      </li>
+                      <li class="list-group-item">Last Created</li>
+                      <li class="list-group-item">Total Activated</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
 	      		</div>
 	      	</div>
       	</div>

@@ -20,12 +20,18 @@
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fe fe-x"></i>
           </button>
-         
 
-          <!-- Button -->
-          <a class="navbar-btn btn btn-sm btn-primary lift ml-auto" href="{{ route('register')}}">
-            Get started
-          </a>
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="{{ route('login')}}" class="nav-link">Login</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="" class=" btn btn-sm btn-primary lift" href="{{ route('register')}}"> Register </a>
+            </li>
+          </ul>
+        
 
         </div>
   

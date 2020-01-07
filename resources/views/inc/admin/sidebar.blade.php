@@ -66,6 +66,17 @@
             </a>
           
           </li>
+
+
+           <li class="nav-item {{ Request::is('*request/*') ? 'active' : ''}}">
+            <a class="nav-link" href="{{ route('admin.request.all')}}">
+              <i class="material-icons">people_outline</i>
+              <p> Requests </p>
+            </a>
+          
+          </li>
+
+
          
         </ul>
       </div>

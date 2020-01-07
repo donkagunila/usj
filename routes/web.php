@@ -87,6 +87,14 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
          Route::post('create', 'OpeningController@save')->name('save');
      });
 
+
+      Route::prefix('request')->name('request.')->group(function ()
+     {
+         Route::get('all', 'RequestController@index')->name('all');
+         Route::get('create', 'RequestController@create')->name('create');
+         Route::post('create', 'RequestController@save')->name('save');
+     });
+
 });
 
 /* ----------------------- Admin Routes END -------------------------------- */

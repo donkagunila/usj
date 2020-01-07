@@ -21,7 +21,7 @@
                     </div>
 						
                            <div>
-                           	<input type="text" name="name" class="form-control" placeholder="Fullname">
+                           	<input type="text" name="name" class="form-control" placeholder="Vendor name">
                            </div>
 
                            <div>

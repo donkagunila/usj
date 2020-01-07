@@ -21,7 +21,7 @@
                     </div>
 						
                            <div>
-                           	<input type="text" name="name" class="form-control" placeholder="Vendor name">
+                           	<input type="text" name="name" class="form-control" placeholder="Vendor register name">
                            </div>
 
                            <div>
@@ -40,7 +40,11 @@
                            	<input type="text" name="subcat" class="form-control" placeholder="Subcategory">
                            </div>
 
+                            <div class="form-group">
+                             <input type="text" class="form-control" placeholder="about" name="about">
+                           </div>
 
+                          
 
                            <div>
                              <h2>

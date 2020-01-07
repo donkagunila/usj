@@ -58,4 +58,10 @@ class User extends Authenticatable implements MustVerifyEmail
                 break;
         }
     }
+
+
+     public function Vrequest()
+    {
+        return $this->hasOne(Vrequest::class);
+    }
 }

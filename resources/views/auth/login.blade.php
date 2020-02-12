@@ -1,7 +1,70 @@
-@extends('layouts.app')
+@extends('layouts.auth')
+
+@section('title', 'Login')
 
 @section('content')
-<div class="container">
+
+<div class="container-fluid">
+    <div class="row">
+        {{-- the left part --}}
+        <div class="col-md-6 left-part">
+            
+        </div>
+
+        {{-- the right part --}}
+        <div class="col-md-6 right-part d-sm-none d-md-block">
+            <div id="particles-js"></div>
+
+            <div class="slider-holder">
+                <div id="onboard" class="carousel slide" data-ride="carousel">
+
+                    <ol class="carousel-indicators">
+                        <li data-target="#onboard" data-slide-to="0" class="active"></li>
+                        <li data-target="#onboard" data-slide-to="1"></li>
+                        <li data-target="#onboard" data-slide-to="2"></li>
+                    </ol>
+
+
+                  <div class="carousel-inner slider-content">
+                    <div class="carousel-item active">
+                        <div class="slider-area">
+                            <div class="slider-image mb-5">
+                                <img src="{{ asset('img/fast.png')}}" class="d-block " alt="...">
+                            </div>
+
+                            <div class="slider-title mb-3">
+                                <h4>
+                                    Fast Enrollment
+                                </h4>
+                            </div>
+
+                            <div class="slider-words mb-11">
+                                <p>
+                                    With a click of a button, <br> usajili enrolls you instantly.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="carousel-item">
+                        <div>
+                            two
+                        </div>
+                      <img src="..." class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <div>
+                            3
+                        </div>
+                      <img src="..." class="d-block w-100" alt="...">
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" hidden>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

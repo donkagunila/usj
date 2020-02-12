@@ -6,7 +6,7 @@
 }
 
 h1, h2, h3, h4, h5, h6{
-	font-family: 'Niramit', sans-serif;
+	font-family: 'Nunito', sans-serif;
 }
 p, a{
 	font-family: 'Open Sans', sans-serif;
@@ -49,4 +49,52 @@ p, a{
 }
 .sidebar .list-group .list-group-item.active a{
 	color: #fff !important;
+}
+
+.right-part, .left-part{
+	min-height: 100vh;
+}
+.right-part{
+	background-color: #ff8900;
+}
+#particles-js{
+	height: 100%;
+	position: absolute;
+}
+.slider-holder{
+	position: relative;
+	height: 100%;
+}
+#onboard{
+	height: 100%;
+}
+.slider-content{
+	height: 100% !important;
+	background-color: red;
+}
+.slider-content .carousel-item{
+	height: 100%;
+}
+.slider-area{
+	background-color: teal;
+	height: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+.slider-image{
+	background-color: red;
+	height: 180px;
+	width: 180px;
+	border-radius: 50%;
+}
+.slider-image img{
+	height: 150px;
+	/*width: 150px;*/
 }

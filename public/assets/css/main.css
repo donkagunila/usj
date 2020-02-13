@@ -6,10 +6,16 @@
 }
 
 h1, h2, h3, h4, h5, h6{
-	font-family: 'Nunito', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 p, a{
 	font-family: 'Open Sans', sans-serif;
+}
+.btn.btn-primary{
+	background-color: #ff8900;
+	border: none;
+	height: 44px;
+	min-width: 120px;
 }
 
 
@@ -111,13 +117,11 @@ p, a{
 	font-weight: 600;
 }
 .slider-words p{
-	font-family: 'Open sans', sans-serif;
 	font-size: 20px;
 }
+
 .carousel-indicators{
-	/*height: 10px;*/
-	/*width: 10px;*/
-	/*background-color: #fff;*/
+	bottom: 60px;
 }
 .carousel-indicators li {
     box-sizing: content-box;
@@ -143,4 +147,54 @@ p, a{
 	border-radius: 8px;
 	transition: .3s ease-in-out;
 	border: none;
+}
+
+.left-part{
+	color: #707070;
+}
+.form-holder{
+	/*background-color: red;*/
+	height: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	/*-ms-align-items: center;*/
+	/*align-items: center;*/
+	flex-direction: column;
+}
+.form-title h3{
+	font-weight: 600;
+	font-size: 32px;
+}
+.form-title p{
+	font-size: 16px;
+}
+.form-body .form-control{
+	border: none;
+	border-radius: 0px !important;
+	border-bottom: 0.5px solid #70707080;
+}
+.form-body .form-control:focus{
+	box-shadow: none !important;
+}
+.input-group-text{
+	background-color: transparent;
+	border: none;
+	border-bottom: 0.5px solid #70707080;
+	display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0px ;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #707070;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 0px;
 }

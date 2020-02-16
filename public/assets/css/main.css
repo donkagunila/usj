@@ -16,6 +16,10 @@ p, a{
 	border: none;
 	height: 44px;
 	min-width: 120px;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	font-weight: 500;
 }
 
 
@@ -95,8 +99,8 @@ p, a{
 }
 .slider-image{
 	background-color: #ffffff53;
-	height: 180px;
-	width: 180px;
+	height: 150px;
+	width: 150px;
 	border-radius: 50%;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -108,7 +112,7 @@ p, a{
 	align-items: flex-end;
 }
 .slider-image img{
-	height: 150px;
+	height: 130px;
 	margin-bottom: 10px;
 	/*width: 150px;*/
 }
@@ -154,6 +158,8 @@ p, a{
 }
 .form-holder{
 	/*background-color: red;*/
+	width: 420px;
+	margin: 0 auto;
 	height: 100%;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -164,6 +170,7 @@ p, a{
 	/*-ms-align-items: center;*/
 	/*align-items: center;*/
 	flex-direction: column;
+	padding: 0px 35px;
 }
 .form-title h3{
 	font-weight: 600;
@@ -176,9 +183,13 @@ p, a{
 	border: none;
 	border-radius: 0px !important;
 	border-bottom: 0.5px solid #70707080;
+	padding-bottom: 20px;
 }
 .form-body .form-control:focus{
 	box-shadow: none !important;
+}
+.input-group-prepend{
+    /*padding-bottom: 20px;*/
 }
 .input-group-text{
 	background-color: transparent;
@@ -188,13 +199,24 @@ p, a{
     display: flex;
     -ms-flex-align: center;
     align-items: center;
-    padding: 0px ;
+    padding: 0px 0px 13px 0px;
     margin-bottom: 0;
-    font-size: 1rem;
+    font-size: 18px;
     font-weight: 400;
-    line-height: 1.5;
     color: #707070;
     text-align: center;
     white-space: nowrap;
     border-radius: 0px;
+    min-width: 20px;
+}
+.input-group-text.is-invalid{
+	 color: #333;
+	 border-bottom: 0.5px solid red;
+}
+.forgot-link a{
+	display: block;
+	padding: 0px;
+	font-size: 12px;
+	font-family: 'Poppins', sans-serif;
+	color: #ff8900;
 }

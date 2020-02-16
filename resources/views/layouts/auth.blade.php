@@ -8,7 +8,7 @@
 
     <link rel="icon" type="image/png" href="/assets/img/logo/favicon.png">
 
-    <link href="https://fonts.googleapis.com/css?family=poppins|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins:400,500,600&display=swap" rel="stylesheet">
     
 
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/lib/font-awesome/css/font-awesome.min.css')}}"/>

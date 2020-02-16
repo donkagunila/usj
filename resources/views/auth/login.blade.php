@@ -33,13 +33,19 @@
                             <div class="input-group mb-4">
 
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1">
+                                    <span class="input-group-text {{ $errors->has('email') ? ' is-invalid' : '' }}">
                                         <i class="fa fa-envelope"></i>
                                     </span>
                                 </div>
 
                                 
-                                    <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="Email Address" required autofocus>
+                                    <input id="email" 
+                                           type="email" 
+                                           class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" 
+                                           name="email" 
+                                           value="{{ old('email') }}" 
+                                           placeholder="Email Address" 
+                                           required autofocus>
 
                                     @if ($errors->has('email'))
                                         <span class="invalid-feedback" role="alert">
@@ -49,15 +55,15 @@
                                 
                             </div>
 
-                            <div class="input-group mb-3">
+                            <div class="input-group mb-1">
 
-                                  <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
                                         <i class="fa fa-lock"></i>
                                     </span>
                                 </div>
                                
-                                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Password" required>
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Password" required>
 
                                     @if ($errors->has('password'))
                                         <span class="invalid-feedback" role="alert">
@@ -67,9 +73,9 @@
                                 
                             </div>
 
-                            <div class="form-group">
+                            <div class="forgot-link mb-5">
                                  @if (Route::has('password.request'))
-                                    <a class="btn btn-link float-right" href="{{ route($forgotPasswordRoute) }}">
+                                    <a class="btn btn-link text-right" href="{{ route($forgotPasswordRoute) }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
@@ -85,14 +91,14 @@
                                 </button>                               
                             </div>
                         </div>
-                    </form>
+                      </form>
                     </div>
 
             </div>
         </div>
 
         {{-- the right part --}}
-        <div class="col-md-6 right-part d-sm-none d-md-block">
+        <div class="col-md-6 right-part d-none d-md-block">
             <div id="particles-js"></div>
 
             <div class="slider-holder">

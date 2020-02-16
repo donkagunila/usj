@@ -85,12 +85,20 @@
                         
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4 clear">
+                            <div class="col-md-8 offset-md-4 clear mb-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Sign In') }}
                                 </button>                               
                             </div>
                         </div>
+
+
+                         <div class="form-group mb-0">
+                            <div class="small text-center">
+                                New to <b>Usajili?</b> <a href="{{ route('register')}}" class="text-primary">Create account</a>                    
+                            </div>
+                        </div>
+
                       </form>
                     </div>
 

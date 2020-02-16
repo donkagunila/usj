@@ -220,3 +220,7 @@ p, a{
 	font-family: 'Poppins', sans-serif;
 	color: #ff8900;
 }
+.text-primary{
+	font-family: 'Poppins', sans-serif;
+	color: #ff8900 !important;
+}

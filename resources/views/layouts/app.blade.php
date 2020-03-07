@@ -22,7 +22,7 @@
      
 
 
-    <title>Usajili | @yield('title')</title>
+    <title>@yield('title') | Usajili</title>
 </head>
 <body>
 

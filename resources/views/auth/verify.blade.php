@@ -4,6 +4,8 @@
 
 @section('content')
 
+<div class="col-md-6 left-part">
+
 <div class="verify">
   <div class="container">
     <div class="row justify-content-center align-items-center h-full">
@@ -25,6 +27,8 @@
         </div>
     </div>
 </div>  
+</div>
+
 </div>
 
 @endsection

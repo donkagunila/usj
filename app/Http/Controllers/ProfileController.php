@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Vrequest;
 use App\Profile;
+use App\User;
 use Auth;
+use App\Notifications\testmail;
 
 class ProfileController extends Controller
 {
@@ -19,5 +21,11 @@ class ProfileController extends Controller
     	// return $requested;
 
     	return view('app.profile.index', compact('requested'));
+    }
+
+    public function testmail()
+    {
+    	$user = User::first();
+    	$user->notify(new testmail());
     }
 }

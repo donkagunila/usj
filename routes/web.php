@@ -1,9 +1,12 @@
 <?php
 
+use Illuminate\Notifications\Messages\MailMessage;
+
 
 /* --------------------- Common/User Routes START -------------------------------- */
 
 Route::get('/', 'SiteController@index')->name('index');
+
 
 Auth::routes([ 'verify' => true ]);
 
@@ -26,6 +29,8 @@ Route::get('/openings', 'HomeController@openings')->name('openings')->middleware
 
 Route::get('/my-profile', 'ProfileController@index')->name('profile')->middleware('verified');
 
+
+Route::get('/email/test', 'ProfileController@testmail');
 
 
 /* --------------------- Common/User Routes END -------------------------------- */

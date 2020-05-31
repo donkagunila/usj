@@ -1,0 +1,58 @@
+<?php
+
+namespace Usajili\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use Usajili\Category;
+use Usajili\Vrequest;
+use Auth;
+
+class VendorController extends Controller
+{
+
+	function __construct($foo = null)
+	{
+		$this->middleware('auth');
+	}
+    public function join()
+    {
+
+        $user = Auth::User();
+        $status = $user->vrequest->status;
+
+    	$categories = Category::all();
+    	return view('app.vendor.join', compact('categories', 'status'));
+    }
+
+    public function save(Request $request)
+    {
+
+       //  $validator = $request->validate([
+       //    'name' => 'alphanum|min:6|unique:users',
+       //    'email' => 'required|string|email|max:255|unique:users',
+       //    'password' => 'required|string|min:8|confirmed',
+       // ]);
+
+        $user =  Vrequest::create([
+            'user_id' => Auth::id(),
+            'name' => request('name'),
+            'category' => request('email'),
+            'subcat' => request('subcat'),
+            'about' => request('about'),
+            'location' => request('location'),
+            'ward' => request('ward'),
+            'district' => request('district'),
+            'region' => request('region'),
+            'country' => request('country'),
+            'phone' => request('phone'),
+            'email' => request('email'),
+            'address' => request('address'),
+            'website' => request('website'),
+            'status' => 1
+        ]);
+
+        $request->session()->flash('success', 'Success, Submitted successfuly');
+    	return redirect()->route('vendor.join');
+    }
+}

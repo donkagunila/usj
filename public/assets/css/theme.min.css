@@ -15920,3 +15920,15 @@ body.compensate-for-scrollbar {
 
 }
 
+.bg-muted{
+    background-color: #f9fbfd;
+}
+.user-name{
+    font-weight: 600;
+    line-height: 10px;
+}
+.company-name{
+    display: inline-block;
+    font-weight: 400;
+}
+

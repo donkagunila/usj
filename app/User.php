@@ -70,4 +70,15 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasOne(Vrequest::class);
     }
+
+
+    public function timeline()
+    {
+        return Post::where('user_id', $this->id)->latest()->get();
+    }
+
+    public function _getAvatar()
+    {
+        return "https://i.pravatar.cc/50";
+    }
 }

@@ -3,15 +3,15 @@
 	<div class="card-bod">
 		<header class="d-flex align-items-center px-5 pt-5">
 			<div class="image-holder avatar-lg">
-				<img src="https://i.pravatar.cc/100" 
+				<img src="https://i.pravatar.cc/50?u={{ $post->user->email}}" 
 				     alt=""
 				     class="avatar-img rounded-circle">
 			</div>
 
 			<div class="flex-1 ml-5">
 				<div>
-					<p class="user-name">Name here</p>
-					<span class="company-name">Company name</span>
+					<p class="user-name">{{ $post->user->username }}</p>
+					<span class="company-name small">Company name</span>
 				</div>
 			</div>
 		</header>
@@ -20,7 +20,7 @@
 
 	<div>
 		<p class="p-5">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis inventore cumque, soluta suscipit nulla adipisci delectus asperiores. Et voluptatum, expedita accusantium pariatur, rem harum impedit dolore amet, facilis atque tenetur.
+			{{ $post->body }}
 		</p>
 	</div>
 

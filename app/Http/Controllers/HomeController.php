@@ -8,27 +8,19 @@ use Usajili\Post;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+
     public function __construct()
     {
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
+    
+        return view('app.feed', [
 
-        $posts = Post::all();
-
-        return view('app.feed', compact('posts'));
+            'posts' => auth()->user()->timeline()
+        ]);
     }
 
 

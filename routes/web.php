@@ -26,6 +26,13 @@ Route::middleware(['verified'])->group(function () {
         Route::post('/submit', 'VendorController@save')->name('store');
     });
 
+
+
+    Route::prefix('/post')->name('post.')->group(function ()
+    {
+       Route::post('/create', 'PostController@store')->name('create'); 
+    });
+
     Route::get('/feed/all', 'HomeController@index')->name('home');
     Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 

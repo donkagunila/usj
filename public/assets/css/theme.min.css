@@ -15925,10 +15925,19 @@ body.compensate-for-scrollbar {
 }
 .user-name{
     font-weight: 600;
-    line-height: 10px;
+    margin-bottom: 0px;
 }
 .company-name{
     display: inline-block;
     font-weight: 400;
 }
 
+
+/*inputs*/
+.input-rounded{
+    border-radius: 42px;
+}
+.form-control.pointer{
+
+    cursor: pointer;
+}

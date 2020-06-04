@@ -17,7 +17,7 @@
 
 		<div class="col-md-7">
 			<div class="d-flex justify-content-center">
-				<div class="row">
+				<div class="row w-75">
 				<div class="col-md-12">
 					<div class="card mb-2">
 						<div class="card-body">

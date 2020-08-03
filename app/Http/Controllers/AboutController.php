@@ -1,8 +1,8 @@
 <?php
 
-namespace Usajili\Http\Controllers;
+namespace App\Http\Controllers;
 
-use Usajili\About;
+use App\About;
 use Illuminate\Http\Request;
 
 class AboutController extends Controller
@@ -41,7 +41,7 @@ class AboutController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \Usajili\About  $about
+     * @param  \App\About  $about
      * @return \Illuminate\Http\Response
      */
     public function show(About $about)
@@ -52,7 +52,7 @@ class AboutController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \Usajili\About  $about
+     * @param  \App\About  $about
      * @return \Illuminate\Http\Response
      */
     public function edit(About $about)
@@ -64,7 +64,7 @@ class AboutController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \Usajili\About  $about
+     * @param  \App\About  $about
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, About $about)
@@ -75,7 +75,7 @@ class AboutController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \Usajili\About  $about
+     * @param  \App\About  $about
      * @return \Illuminate\Http\Response
      */
     public function destroy(About $about)

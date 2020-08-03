@@ -1,6 +1,6 @@
 <?php
 
-namespace Usajili\Notifications;
+namespace App\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;

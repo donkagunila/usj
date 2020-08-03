@@ -1,9 +1,9 @@
 <?php
 
-namespace Usajili\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Usajili\Opening;
+use App\Opening;
 
 class OpeningController extends Controller
 {

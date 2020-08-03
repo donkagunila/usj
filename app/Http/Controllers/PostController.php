@@ -1,9 +1,9 @@
 <?php
 
-namespace Usajili\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Usajili\Post;
+use App\Post;
 
 class PostController extends Controller
 {

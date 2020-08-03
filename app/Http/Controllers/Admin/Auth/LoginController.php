@@ -1,10 +1,10 @@
 <?php
 
-namespace Usajili\Http\Controllers\Admin\Auth;
+namespace App\Http\Controllers\Admin\Auth;
 
 use Auth;
 use Illuminate\Http\Request;
-use Usajili\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 
 class LoginController extends Controller

@@ -1,11 +1,11 @@
 <?php
 
-namespace Usajili\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use Usajili\Category;
-use Usajili\Vrequest;
+use App\Category;
+use App\Vrequest;
 use Auth;
 
 class VendorController extends Controller

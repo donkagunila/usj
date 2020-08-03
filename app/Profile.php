@@ -1,8 +1,8 @@
 <?php
 
-namespace Usajili;
+namespace App;
 
-use Usajili\User;
+use App\User;
 use Illuminate\Notifications\Notifiable;
 
 use Illuminate\Database\Eloquent\Model;

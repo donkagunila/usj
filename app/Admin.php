@@ -1,12 +1,12 @@
 <?php
 
-namespace Usajili;
+namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Usajili\Notifications\AdminEmailVerificationNotification;
-use Usajili\Notifications\AdminResetPasswordNotification as Notification;
+use App\Notifications\AdminEmailVerificationNotification;
+use App\Notifications\AdminResetPasswordNotification as Notification;
 
 class Admin extends Authenticatable implements MustVerifyEmail
 {

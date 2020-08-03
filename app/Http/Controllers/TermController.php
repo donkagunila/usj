@@ -1,8 +1,8 @@
 <?php
 
-namespace Usajili\Http\Controllers;
+namespace App\Http\Controllers;
 
-use Usajili\Term;
+use App\Term;
 use Illuminate\Http\Request;
 
 class TermController extends Controller
@@ -41,7 +41,7 @@ class TermController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \Usajili\Term  $term
+     * @param  \App\Term  $term
      * @return \Illuminate\Http\Response
      */
     public function show(Term $term)
@@ -52,7 +52,7 @@ class TermController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \Usajili\Term  $term
+     * @param  \App\Term  $term
      * @return \Illuminate\Http\Response
      */
     public function edit(Term $term)
@@ -64,7 +64,7 @@ class TermController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \Usajili\Term  $term
+     * @param  \App\Term  $term
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Term $term)
@@ -75,7 +75,7 @@ class TermController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \Usajili\Term  $term
+     * @param  \App\Term  $term
      * @return \Illuminate\Http\Response
      */
     public function destroy(Term $term)

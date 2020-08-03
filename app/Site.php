@@ -1,7 +1,7 @@
 <?php
 
-namespace Usajili;
-use Usajili\User;
+namespace App;
+use App\User;
 
 use Illuminate\Database\Eloquent\Model;
 

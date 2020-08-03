@@ -1,11 +1,11 @@
 <?php
 
-namespace Usajili\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use Usajili\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 
-use Usajili\Opening;
+use App\Opening;
 
 class OpeningController extends Controller
 {

@@ -1,14 +1,14 @@
 <?php
 
-namespace Usajili\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Usajili\Vrequest;
-use Usajili\Profile;
-use Usajili\User;
+use App\Vrequest;
+use App\Profile;
+use App\User;
 use Auth;
-use Usajili\AccountSetting;
-use Usajili\Notifications\testmail;
+use App\AccountSetting;
+use App\Notifications\testmail;
 
 class ProfileController extends Controller
 {

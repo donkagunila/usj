@@ -1,8 +1,8 @@
 <?php
 
-namespace Usajili\Http\Controllers;
+namespace App\Http\Controllers;
 
-use Usajili\Blog;
+use App\Blog;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -41,7 +41,7 @@ class BlogController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \Usajili\Blog  $blog
+     * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
     public function show(Blog $blog)
@@ -52,7 +52,7 @@ class BlogController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \Usajili\Blog  $blog
+     * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
     public function edit(Blog $blog)
@@ -64,7 +64,7 @@ class BlogController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \Usajili\Blog  $blog
+     * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Blog $blog)
@@ -75,7 +75,7 @@ class BlogController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \Usajili\Blog  $blog
+     * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
     public function destroy(Blog $blog)

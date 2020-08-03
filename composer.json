@@ -34,7 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Usajili\\": "app/"
+            "App\\": "app/"
         },
         "classmap": [
             "database/seeds",

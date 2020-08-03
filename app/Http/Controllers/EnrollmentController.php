@@ -1,9 +1,9 @@
 <?php
 
-namespace Usajili\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Usajili\Enrollment;
+use App\Enrollment;
 
 class EnrollmentController extends Controller
 {

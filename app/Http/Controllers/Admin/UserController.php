@@ -1,11 +1,11 @@
 <?php
 
-namespace Usajili\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use Usajili\Http\Controllers\Controller;
-use Usajili\User;
-use Usajili\Profile;
+use App\Http\Controllers\Controller;
+use App\User;
+use App\Profile;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
 

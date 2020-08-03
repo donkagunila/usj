@@ -1,11 +1,11 @@
 <?php
 
-namespace Usajili\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
-use Usajili\User;
-use Usajili\Profile;
-use Usajili\AccountSetting;
-use Usajili\Http\Controllers\Controller;
+use App\User;
+use App\Profile;
+use App\AccountSetting;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -61,7 +61,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \Usajili\User
+     * @return \App\User
      */
     protected function create(array $data)
     {

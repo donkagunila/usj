@@ -1,10 +1,10 @@
 <?php
 
-namespace Usajili\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Usajili\Opening;
-use Usajili\Post;
+use App\Opening;
+use App\Post;
 
 class HomeController extends Controller
 {

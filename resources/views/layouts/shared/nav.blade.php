@@ -74,6 +74,13 @@
                     </a>
                 </li>
 
+                 <li class="nav-item">
+                    <a class="nav-link {{ Request::is('*/opening*') ? 'active' : ''}}"
+                       href="{{ route('admin.opening.all') }}" >
+                        <i class="fe fe-life-buoy"></i> Openings
+                    </a>
+                </li>
+
 
 
 

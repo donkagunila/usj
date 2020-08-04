@@ -3,36 +3,52 @@
 @section('title', 'Dashboard | Admin')
 
 @section('content')
-<div class="content">
-	<div class="container-fluid">
-		<div class="row">
 
-			<div class="col-md-12">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="card">
-							<div class="card-body">
-								<div class="card-title">
-									<h4>Openings</h4>
-									<div class="float-right">
-										<a href="{{ route('admin.opening.create')}}" class="btn btn-primary">
-											<i class="material-icons">add</i>
-											Create
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			 <div class="col-md-12">
+	@include('layouts.shared.nav')
+
+<div class="main-content">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+
+			<div class="col-12 col-lg-10 col-xl-8">
+
+				 <!-- Header -->
+                <div class="header mt-md-5">
+                    <div class="header-body">
+
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <!-- Pretitle -->
+                                <h6 class="header-pretitle">
+                                    Openings
+                                </h6>
+
+                                <!-- Title -->
+                                <h1 class="header-title">
+                                    All Openings
+                                </h1>
+                            </div>
+
+                            <div class="col-auto">
+
+				                <!-- Button -->
+				                <a href="#!" class="btn btn-primary lift">
+				                  Create Opening
+				                </a>
+
+				              </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
 				<div class="card">
-					<div class="card-header card-header-primary card-header-icon">
-					 <div class="card-icon">
-	                    <i class="material-icons">people</i>
-	                  </div>
-	                  <h4 class="card-title">All Openings</h4>
+					<div class="card-header">					
+	                  <h4 class="card-header-title">All Openings</h4>
 					</div>
 
 
@@ -40,9 +56,7 @@
 					{{-- card body --}}
 
 					<div class="card-body">
-						<div class="toolbar">
-							
-						</div>
+	
 
 						<div class="material-datatables">
 							<table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">

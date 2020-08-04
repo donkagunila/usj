@@ -81,4 +81,10 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return "https://i.pravatar.cc/50";
     }
+
+
+    public static function increase()
+    {
+        return 2;
+    }
 }

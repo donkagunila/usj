@@ -3,26 +3,62 @@
 @section('title', 'Dashboard | Admin')
 
 @section('content')
-<div class="content">
+
+	@include('layouts.shared.nav')
+
+<div class="main-content">
 	<div class="container-fluid">
 		<div class="row">
-			 <div class="col-md-12">
+			 <div class="col-12 col-lg-10 col-xl-10">
+
+				 <!-- Header -->
+				 <div class="header mt-md-5">
+					 <div class="header-body">
+
+						 <div class="row align-items-center">
+							 <div class="col">
+								 <!-- Pretitle -->
+								 <h6 class="header-pretitle">
+									 Users
+								 </h6>
+
+								 <!-- Title -->
+								 <h1 class="header-title">
+									 All Users
+								 </h1>
+							 </div>
+
+							 <div class="col-auto">
+
+								 <!-- Buttons -->
+								 <a href="{{ route('admin.user.add') }}" class="btn btn-primary ml-2">
+									 Create User
+								 </a>
+
+
+							 </div>
+						 </div>
+
+					 </div>
+				 </div>
+
 				<div class="card">
-					<div class="card-header card-header-primary card-header-icon">
-					 <div class="card-icon">
-	                    <i class="material-icons">people</i>
-	                  </div>
-	                  <h4 class="card-title">All Users</h4>
+					<div class="card-header">
+
+						<!-- Title -->
+						<h4 class="card-header-title">
+							All Users
+						</h4>
+
+						<!-- Button -->
+						<a href="#!" class="btn btn-sm btn-white">
+							Export
+						</a>
 					</div>
 
 
 
-					{{-- card body --}}
 
-					<div class="card-body">
-						<div class="toolbar">
-							
-						</div>
 
 						<div class="material-datatables">
 							<table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
@@ -58,7 +94,6 @@
 				                    </tbody>
 							</table>
 						</div>
-					</div>
 				</div>
 				{{-- end of card --}}
 			 </div>

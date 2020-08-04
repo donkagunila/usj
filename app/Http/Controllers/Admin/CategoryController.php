@@ -15,6 +15,12 @@ class CategoryController extends Controller
         return view('admin.category.index', compact('categories'));
     }
 
+    public function create()
+    {
+
+        return view('admin.category.create');
+    }
+
     public function save(Request $request)
     {
 
@@ -24,6 +30,6 @@ class CategoryController extends Controller
     	]);
 
     	$request->session()->flash('success', 'Success, Category created successfully');
-    	return redirect()->route('admin.category.all');
+    	return redirect()->route('admin.category.index');
     }
 }

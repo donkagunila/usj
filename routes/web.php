@@ -115,16 +115,17 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
 
     Route::prefix('user')->group(function ()
     {
-       Route::get('list', 'UserController@index')->name('user.list');
-       Route::get('add', 'UserController@create')->name('user.add');
-       Route::post('add', 'UserController@save')->name('user.save');
+        Route::get('add', 'UserController@create')->name('user.add');
+        Route::post('add', 'UserController@save')->name('user.save');
+        Route::get('', 'UserController@index')->name('user');
 
     });
 
      Route::prefix('/category')->name('category.')->group(function (){
-       Route::get('/all', 'CategoryController@index')->name('all'); 
-        Route::post('/all', 'CategoryController@save')->name('save'); 
-    });
+         Route::get('/create', 'CategoryController@create')->name('create');
+         Route::post('/create', 'CategoryController@save')->name('save');
+         Route::get('/', 'CategoryController@index')->name('index');
+     });
 
      Route::prefix('opening')->name('opening.')->group(function ()
      {

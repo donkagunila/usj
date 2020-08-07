@@ -32,7 +32,7 @@
                             <div class="col-auto">
 
 				                <!-- Button -->
-				                <a href="#!" class="btn btn-primary lift">
+				                <a href="{{ route('admin.opening.create') }}" class="btn btn-primary lift">
 				                  Create Opening
 				                </a>
 

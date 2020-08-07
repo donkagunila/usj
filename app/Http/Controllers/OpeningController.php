@@ -11,4 +11,8 @@ class OpeningController extends Controller
     {
     	return Opening::all();	
     }
+
+    public function create() {
+
+    }
 }

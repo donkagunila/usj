@@ -20,8 +20,7 @@ class CreateOpeningsTable extends Migration
             $table->string('title');
             $table->longtext('description');
             $table->integer('cost');
-            $table->dateTime('start');
-            $table->dateTime('end');
+            $table->dateTime('date');
             $table->string('poster');
             $table->integer('certificate')->nullable();
             $table->integer('vacancy')->nullable();

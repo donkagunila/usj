@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="{{ asset('admin/assets/libs/quill/dist/quill.core.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin/assets/libs/highlightjs/styles/vs2015.css') }}" />
 
+
     <!-- Map -->
     <link href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" rel="stylesheet" />
 
@@ -104,7 +105,7 @@
 <!-- Libs JS -->
 <script src="{{ asset('admin/assets/libs/jquery/dist/jquery.min.js') }}"></script>
 <script src="{{ asset('admin/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('admin/assets/libs/%40shopify/draggable/lib/es5/draggable.bundle.legacy.js') }}"></script>
+<script src="{{ asset('admin/assets/libs/@shopify/draggable/lib/es5/draggable.bundle.legacy.js') }}"></script>
 <script src="{{ asset('admin/assets/libs/autosize/dist/autosize.min.js') }}"></script>
 <script src="{{ asset('admin/assets/libs/chart.js/dist/Chart.min.js') }}"></script>
 <script src="{{ asset('admin/assets/libs/dropzone/dist/min/dropzone.min.js') }}"></script>
@@ -120,8 +121,8 @@
 {{-- <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script> --}}
 
 <!-- Theme JS -->
-<script src="{{ asset('assets/js/theme.min.js') }}"></script>
-<script src="{{ asset('assets/js/dashkit.min.js') }}"></script>
+<script src="{{ asset('admin/assets/js/theme.min.js') }}"></script>
+<script src="{{ asset('admin/assets/js/dashkit.min.js') }}"></script>
 
 @yield('scripts')
 </body>
